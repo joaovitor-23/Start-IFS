@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TalentIFS - Banco de Talentos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="gradient-bg text-white shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                        <span class="text-purple-600 font-bold text-xl">T</span>
+                    </div>
+                    <h1 class="text-2xl font-bold">TalentIFS</h1>
+                </div>
+                <nav class="hidden md:flex space-x-6">
+                    <button onclick="showSection('home')" class="hover:text-purple-200 transition-colors">Início</button>
+                    <button onclick="showSection('students')" class="hover:text-purple-200 transition-colors">Talentos</button>
+                    <button onclick="showSection('register')" class="hover:text-purple-200 transition-colors">Cadastrar</button>
+                    <button onclick="showSection('companies')" class="hover:text-purple-200 transition-colors">Empresas</button>
+                </nav>
+                <button class="md:hidden text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="section-content">
+        <!-- Hero Section -->
+        <div class="gradient-bg text-white py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-5xl font-bold mb-6">Conectando Talentos do IFS com o Mercado</h2>
+                <p class="text-xl mb-8 max-w-3xl mx-auto">Plataforma desenvolvida no hackathon para conectar estudantes talentosos do Instituto Federal de Sergipe com empresas em busca de novos talentos.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button onclick="showSection('register')" class="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                        Cadastrar como Aluno
+                    </button>
+                    <button onclick="showSection('companies')" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
+                        Sou uma Empresa
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features -->
+        <div class="py-16 bg-white">
+            <div class="container mx-auto px-6">
+                <h3 class="text-3xl font-bold text-center mb-12 text-gray-800">Como Funciona</h3>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center p-6 card-hover bg-gray-50 rounded-lg">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                            </svg>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-3">Alunos se Cadastram</h4>
+                        <p class="text-gray-600">Estudantes do IFS criam perfis com suas habilidades, projetos e experiências.</p>
+                    </div>
+                    <div class="text-center p-6 card-hover bg-gray-50 rounded-lg">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                            </svg>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-3">Empresas Buscam</h4>
+                        <p class="text-gray-600">Empresas exploram perfis e encontram talentos que se encaixam em suas necessidades.</p>
+                    </div>
+                    <div class="text-center p-6 card-hover bg-gray-50 rounded-lg">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                            </svg>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-3">Conexão Direta</h4>
+                        <p class="text-gray-600">Facilitamos o contato direto entre empresas e estudantes para oportunidades.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Students Section -->
+    <section id="students" class="section-content hidden">
+        <div class="container mx-auto px-6 py-12">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold text-gray-800">Talentos Cadastrados</h2>
+                <div class="flex gap-4">
+                    <select class="border border-gray-300 rounded-lg px-4 py-2" onchange="filterStudents()">
+                        <option value="">Todos os Cursos</option>
+                        <option value="Informática">Informática</option>
+                        <option value="Eletrônica">Eletrônica</option>
+                        <option value="Mecânica">Mecânica</option>
+                        <option value="Administração">Administração</option>
+                    </select>
+                    <input type="text" placeholder="Buscar por habilidade..." class="border border-gray-300 rounded-lg px-4 py-2" onkeyup="searchStudents(this.value)">
+                </div>
+            </div>
+            
+            <div id="students-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Students will be populated here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Register Section -->
+    <section id="register" class="section-content hidden">
+        <div class="container mx-auto px-6 py-12">
+            <div class="max-w-2xl mx-auto bg-white rounded-lg shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">Cadastro de Aluno</h2>
+                <form id="student-form" onsubmit="registerStudent(event)">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Nome Completo</label>
+                            <input type="text" required class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Email</label>
+                            <input type="email" required class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Telefone</label>
+                            <input type="tel" required class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Curso</label>
+                            <select required class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                                <option value="">Selecione seu curso</option>
+                                <option value="Informática">Técnico em Informática</option>
+                                <option value="Eletrônica">Técnico em Eletrônica</option>
+                                <option value="Mecânica">Técnico em Mecânica</option>
+                                <option value="Administração">Técnico em Administração</option>
+                                <option value="Engenharia">Engenharia</option>
+                                <option value="Outros">Outros</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Período</label>
+                            <select required class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                                <option value="">Selecione o período</option>
+                                <option value="1º">1º Período</option>
+                                <option value="2º">2º Período</option>
+                                <option value="3º">3º Período</option>
+                                <option value="4º">4º Período</option>
+                                <option value="Formado">Formado</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">LinkedIn (opcional)</label>
+                            <input type="url" placeholder="https://linkedin.com/in/seuperfil" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <label class="block text-gray-700 font-semibold mb-2">Habilidades Técnicas</label>
+                        <textarea placeholder="Ex: Python, JavaScript, React, MySQL, Git..." required class="w-full border border-gray-300 rounded-lg px-4 py-2 h-24 focus:ring-2 focus:ring-purple-500 focus:border-transparent"></textarea>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <label class="block text-gray-700 font-semibold mb-2">Sobre Você</label>
+                        <textarea placeholder="Conte um pouco sobre você, seus projetos e objetivos..." required class="w-full border border-gray-300 rounded-lg px-4 py-2 h-32 focus:ring-2 focus:ring-purple-500 focus:border-transparent"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="w-full gradient-bg text-white py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity mt-8">
+                        Cadastrar Perfil
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Companies Section -->
+    <section id="companies" class="section-content hidden">
+        <div class="container mx-auto px-6 py-12">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Área das Empresas</h2>
+                    <p class="text-gray-600 text-lg">Encontre os melhores talentos do IFS para sua empresa</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <div class="bg-white rounded-lg shadow-lg p-6 card-hover">
+                        <h3 class="text-xl font-semibold mb-4 text-gray-800">Buscar Talentos</h3>
+                        <p class="text-gray-600 mb-4">Explore perfis de estudantes qualificados do IFS com diferentes habilidades e especializações.</p>
+                        <button onclick="showSection('students')" class="gradient-bg text-white px-6 py-2 rounded-lg hover:opacity-90 transition-opacity">
+                            Ver Talentos
+                        </button>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-lg p-6 card-hover">
+                        <h3 class="text-xl font-semibold mb-4 text-gray-800">Cadastro de Empresa</h3>
+                        <p class="text-gray-600 mb-4">Registre sua empresa para ter acesso completo aos perfis e informações de contato.</p>
+                        <button onclick="showCompanyForm()" class="gradient-bg text-white px-6 py-2 rounded-lg hover:opacity-90 transition-opacity">
+                            Cadastrar Empresa
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Company Registration Form -->
+                <div id="company-form" class="hidden bg-white rounded-lg shadow-lg p-8">
+                    <h3 class="text-2xl font-bold mb-6 text-gray-800">Cadastro de Empresa</h3>
+                    <form onsubmit="registerCompany(event)">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Nome da Empresa</label>
+                                <input type="text" required class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">CNPJ</label>
+                                <input type="text" required class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Email Corporativo</label>
+                                <input type="email" required class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Telefone</label>
+                                <input type="tel" required class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Responsável pelo RH</label>
+                                <input type="text" required class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Setor de Atuação</label>
+                                <select required class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                                    <option value="">Selecione o setor</option>
+                                    <option value="Tecnologia">Tecnologia</option>
+                                    <option value="Indústria">Indústria</option>
+                                    <option value="Serviços">Serviços</option>
+                                    <option value="Comércio">Comércio</option>
+                                    <option value="Outros">Outros</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6">
+                            <label class="block text-gray-700 font-semibold mb-2">Sobre a Empresa</label>
+                            <textarea placeholder="Descreva sua empresa, cultura e oportunidades..." required class="w-full border border-gray-300 rounded-lg px-4 py-2 h-32 focus:ring-2 focus:ring-purple-500 focus:border-transparent"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="gradient-bg text-white px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity mt-6">
+                            Cadastrar Empresa
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
+        <div class="bg-white rounded-lg p-8 max-w-md w-full mx-4">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-xl font-bold text-gray-800">Entrar em Contato</h3>
+                <button onclick="closeContactModal()" class="text-gray-500 hover:text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <div id="contact-info">
+                <!-- Contact information will be populated here -->
+            </div>
+            <div class="mt-6">
+                <label class="block text-gray-700 font-semibold mb-2">Mensagem</label>
+                <textarea placeholder="Digite sua mensagem para o estudante..." class="w-full border border-gray-300 rounded-lg px-4 py-2 h-24 focus:ring-2 focus:ring-purple-500 focus:border-transparent"></textarea>
+            </div>
+            <div class="flex gap-4 mt-6">
+                <button onclick="sendMessage()" class="gradient-bg text-white px-6 py-2 rounded-lg hover:opacity-90 transition-opacity flex-1">
+                    Enviar Mensagem
+                </button>
+                <button onclick="closeContactModal()" class="border border-gray-300 text-gray-700 px-6 py-2 rounded-lg hover:bg-gray-50 transition-colors">
+                    Cancelar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
+        <div class="bg-white rounded-lg p-8 max-w-md w-full mx-4 text-center">
+            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Sucesso!</h3>
+            <p id="success-message" class="text-gray-600 mb-6"></p>
+            <button onclick="closeSuccessModal()" class="gradient-bg text-white px-6 py-2 rounded-lg hover:opacity-90 transition-opacity">
+                OK
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Sample data
+        let students = [
+            {
+                name: "Ana Silva",
+                email: "ana.silva@academico.ifs.edu.br",
+                phone: "(79) 99999-1234",
+                course: "Informática",
+                period: "3º",
+                skills: "Python, Flask, JavaScript, MySQL, Git",
+                about: "Desenvolvedora apaixonada por tecnologia, com experiência em projetos web e mobile. Participei de 3 hackathons e desenvolvi um sistema de gestão escolar.",
+                linkedin: "https://linkedin.com/in/anasilva"
+            },
+            {
+                name: "Carlos Santos",
+                email: "carlos.santos@academico.ifs.edu.br",
+                phone: "(79) 99999-5678",
+                course: "Eletrônica",
+                period: "4º",
+                skills: "Arduino, C++, Python, IoT, Eletrônica Digital",
+                about: "Especialista em sistemas embarcados e IoT. Desenvolvi projetos de automação residencial e sistemas de monitoramento industrial.",
+                linkedin: "https://linkedin.com/in/carlossantos"
+            },
+            {
+                name: "Maria Oliveira",
+                email: "maria.oliveira@academico.ifs.edu.br",
+                phone: "(79) 99999-9012",
+                course: "Administração",
+                period: "2º",
+                skills: "Excel Avançado, Power BI, Gestão de Projetos, Marketing Digital",
+                about: "Focada em análise de dados e gestão empresarial. Experiência com dashboards e relatórios gerenciais para tomada de decisão.",
+                linkedin: "https://linkedin.com/in/mariaoliveira"
+            }
+        ];
+
+        let companies = [];
+
+        // Navigation
+        function showSection(sectionId) {
+            document.querySelectorAll('.section-content').forEach(section => {
+                section.classList.add('hidden');
+            });
+            document.getElementById(sectionId).classList.remove('hidden');
+            
+            if (sectionId === 'students') {
+                displayStudents(students);
+            }
+        }
+
+        // Display students
+        function displayStudents(studentsToShow) {
+            const grid = document.getElementById('students-grid');
+            grid.innerHTML = '';
+            
+            studentsToShow.forEach((student, index) => {
+                const studentCard = `
+                    <div class="bg-white rounded-lg shadow-lg p-6 card-hover">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                                <span class="text-purple-600 font-bold text-lg">${student.name.charAt(0)}</span>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-800">${student.name}</h3>
+                                <p class="text-gray-600">${student.course} - ${student.period} Período</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold text-gray-700 mb-2">Habilidades:</h4>
+                            <div class="flex flex-wrap gap-2">
+                                ${student.skills.split(', ').map(skill => 
+                                    `<span class="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-sm">${skill}</span>`
+                                ).join('')}
+                            </div>
+                        </div>
+                        
+                        <p class="text-gray-600 mb-4 text-sm">${student.about.substring(0, 120)}...</p>
+                        
+                        <div class="flex gap-2">
+                            <button onclick="openContactModal(${index})" class="gradient-bg text-white px-4 py-2 rounded-lg text-sm hover:opacity-90 transition-opacity flex-1">
+                                Entrar em Contato
+                            </button>
+                            ${student.linkedin ? `<a href="${student.linkedin}" target="_blank" class="border border-purple-600 text-purple-600 px-4 py-2 rounded-lg text-sm hover:bg-purple-50 transition-colors">LinkedIn</a>` : ''}
+                        </div>
+                    </div>
+                `;
+                grid.innerHTML += studentCard;
+            });
+        }
+
+        // Filter and search functions
+        function filterStudents() {
+            const courseFilter = event.target.value;
+            const filtered = courseFilter ? students.filter(s => s.course === courseFilter) : students;
+            displayStudents(filtered);
+        }
+
+        function searchStudents(query) {
+            const filtered = students.filter(student => 
+                student.skills.toLowerCase().includes(query.toLowerCase()) ||
+                student.name.toLowerCase().includes(query.toLowerCase()) ||
+                student.course.toLowerCase().includes(query.toLowerCase())
+            );
+            displayStudents(filtered);
+        }
+
+        // Contact modal functions
+        function openContactModal(studentIndex) {
+            const student = students[studentIndex];
+            const modal = document.getElementById('contact-modal');
+            const contactInfo = document.getElementById('contact-info');
+            
+            contactInfo.innerHTML = `
+                <div class="bg-gray-50 rounded-lg p-4 mb-4">
+                    <h4 class="font-semibold text-gray-800 mb-2">${student.name}</h4>
+                    <p class="text-gray-600 text-sm mb-1">${student.course} - ${student.period} Período</p>
+                    <p class="text-gray-600 text-sm mb-1">📧 ${student.email}</p>
+                    <p class="text-gray-600 text-sm">📱 ${student.phone}</p>
+                </div>
+            `;
+            
+            modal.classList.remove('hidden');
+        }
+
+        function closeContactModal() {
+            document.getElementById('contact-modal').classList.add('hidden');
+        }
+
+        function sendMessage() {
+            // In a real Flask app, this would send the message via API
+            showSuccess('Mensagem enviada com sucesso! O estudante receberá sua mensagem por email.');
+            closeContactModal();
+        }
+
+        // Registration functions
+        function registerStudent(event) {
+            event.preventDefault();
+            const form = event.target;
+            const formData = new FormData(form);
+            
+            const newStudent = {
+                name: form.elements[0].value,
+                email: form.elements[1].value,
+                phone: form.elements[2].value,
+                course: form.elements[3].value,
+                period: form.elements[4].value,
+                linkedin: form.elements[5].value,
+                skills: form.elements[6].value,
+                about: form.elements[7].value
+            };
+            
+            students.push(newStudent);
+            form.reset();
+            showSuccess('Cadastro realizado com sucesso! Seu perfil já está disponível para as empresas.');
+        }
+
+        function registerCompany(event) {
+            event.preventDefault();
+            const form = event.target;
+            
+            const newCompany = {
+                name: form.elements[0].value,
+                cnpj: form.elements[1].value,
+                email: form.elements[2].value,
+                phone: form.elements[3].value,
+                responsible: form.elements[4].value,
+                sector: form.elements[5].value,
+                about: form.elements[6].value
+            };
+            
+            companies.push(newCompany);
+            form.reset();
+            document.getElementById('company-form').classList.add('hidden');
+            showSuccess('Empresa cadastrada com sucesso! Agora você tem acesso completo aos perfis dos estudantes.');
+        }
+
+        function showCompanyForm() {
+            document.getElementById('company-form').classList.remove('hidden');
+        }
+
+        // Success modal
+        function showSuccess(message) {
+            document.getElementById('success-message').textContent = message;
+            document.getElementById('success-modal').classList.remove('hidden');
+        }
+
+        function closeSuccessModal() {
+            document.getElementById('success-modal').classList.add('hidden');
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            showSection('home');
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'964d78a550b27a84',t:'MTc1MzQ2NTUyOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
+
