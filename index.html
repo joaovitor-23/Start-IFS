@@ -109,7 +109,7 @@
                         <option value="">Todos os Cursos</option>
                         <option value="Informática">Informática</option>
                         <option value="Eletrônica">Eletrônica</option>
-                        <option value="Mecânica">Mecânica</option>
+                        <option value="Edificações">Edificações</option>
                         <option value="Administração">Administração</option>
                     </select>
                     <input type="text" placeholder="Buscar por habilidade..." class="border border-gray-300 rounded-lg px-4 py-2" onkeyup="searchStudents(this.value)">
@@ -147,7 +147,7 @@
                                 <option value="">Selecione seu curso</option>
                                 <option value="Informática">Técnico em Informática</option>
                                 <option value="Eletrônica">Técnico em Eletrônica</option>
-                                <option value="Mecânica">Técnico em Mecânica</option>
+                                <option value="Edificações">Técnico em Edificações</option>
                                 <option value="Administração">Técnico em Administração</option>
                                 <option value="Engenharia">Engenharia</option>
                                 <option value="Outros">Outros</option>
@@ -161,6 +161,12 @@
                                 <option value="2º">2º Período</option>
                                 <option value="3º">3º Período</option>
                                 <option value="4º">4º Período</option>
+                                <option value="4º">5º Período</option>
+                                <option value="4º">6º Período</option>
+                                <option value="4º">7º Período</option>
+                                <option value="4º">8º Período</option>
+                                <option value="4º">9º Período</option>
+                                <option value="4º">10º Período</option>
                                 <option value="Formado">Formado</option>
                             </select>
                         </div>
@@ -172,7 +178,8 @@
                     
                     <div class="mt-6">
                         <label class="block text-gray-700 font-semibold mb-2">Habilidades Técnicas</label>
-                        <textarea placeholder="Ex: Python, JavaScript, React, MySQL, Git..." required class="w-full border border-gray-300 rounded-lg px-4 py-2 h-24 focus:ring-2 focus:ring-purple-500 focus:border-transparent"></textarea>
+                        <textarea placeholder="Ex: Python, JavaScript, AutoCAD, CorelDRAW, Microsoft Office
+                        ..." required class="w-full border border-gray-300 rounded-lg px-4 py-2 h-24 focus:ring-2 focus:ring-purple-500 focus:border-transparent"></textarea>
                     </div>
                     
                     <div class="mt-6">
@@ -336,6 +343,16 @@
                 linkedin: "https://linkedin.com/in/carlossantos"
             },
             {
+                name: "Eduarda",
+                email: "Eduarda@academico.ifs.edu.br",
+                phone: "(79) 99999-4592",
+                course: "Engenharia",
+                period: "5º",
+                skills: "Excel Avançado, Power BI, Gestão de Projetos",
+                about: "Focada em gestão empresarial. Experiência com relatórios gerenciais para tomada de decisão.",
+                linkedin: "https://linkedin.com/in/Eduarda"
+            },
+            {
                 name: "Maria Oliveira",
                 email: "maria.oliveira@academico.ifs.edu.br",
                 phone: "(79) 99999-9012",
@@ -344,7 +361,27 @@
                 skills: "Excel Avançado, Power BI, Gestão de Projetos, Marketing Digital",
                 about: "Focada em análise de dados e gestão empresarial. Experiência com dashboards e relatórios gerenciais para tomada de decisão.",
                 linkedin: "https://linkedin.com/in/mariaoliveira"
-            }
+            },
+            {
+                name: "João Vitor",
+                email: "Joao.Vitor@academico.ifs.edu.br",
+                phone: "(79) 99999-0831",
+                course: "Engenharia",
+                period: "5º",
+                skills: "Python, Flask, Linux, MySQL, Java",
+                about: "Desenvolvedor apaixonado por tecnologia, com experiência em projetos web e mobile.",
+                linkedin: "https://linkedin.com/in/JoãoVitor"
+            },
+            {
+                name: "Bárbara",
+                email: "Bárbara@academico.ifs.edu.br",
+                phone: "(79) 99999-7895",
+                course: "Engenharia",
+                period: "5º",
+                skills: "Microsoft Office, AutoCAD, Canva, Power BI",
+                about: "Profissional versátil com domínio em Microsoft Office, AutoCAD e Canva, focado em produtividade, design e precisão técnica",
+                linkedin: "https://linkedin.com/in/mariaoliveira"
+            },
         ];
 
         let companies = [];
