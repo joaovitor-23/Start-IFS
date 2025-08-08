@@ -24,15 +24,15 @@
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
 
-            <a href="https://joaovitor-23.github.io/Start-IFS/">
-                <div class="flex items-center space-x-3">
-                    <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-                        <span class="text-purple-600 font-bold text-xl">S</span>
+                <a href="https://joaovitor-23.github.io/Start-IFS/">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                            <span class="text-purple-600 font-bold text-xl">S</span>
+                        </div>
+                        <h1 class="text-2xl font-bold">Start-IFS</h1>
                     </div>
-                    <h1 class="text-2xl font-bold">Start-IFS</h1>
-                </div>
-            </a>
-                
+                </a>
+
                 <nav class="hidden md:flex space-x-6">
                     <button onclick="showSection('home')" class="hover:text-purple-200 transition-colors">Início</button>
                     <button onclick="showSection('students')" class="hover:text-purple-200 transition-colors">Talentos</button>
@@ -508,30 +508,44 @@
             curriculoShow.innerHTML = `
                 <div class="bg-gray-50 rounded-lg p-4 mb-4">                    
                     <img src="https://cdn-icons-png.flaticon.com/512/6596/6596121.png" style="max-height:90px;">
+
                     <h4 class="font-semibold text-gray-800 mb-2">${student.name}</h4>
+                   
+                    <p class="text-gray-600 text-sm">📱 ${student.about}</p>
+                    <hr>
+                    <br>
 
                     <p class="text-gray-600 text-sm mb-1">${student.course} - ${student.period} Período</p>
                     <p class="text-gray-600 text-sm mb-1">📧 ${student.email}</p>
                     <p class="text-gray-600 text-sm">📱 ${student.phone}</p>
-                    
+                    <hr>
+                    <br>
 
                     <h4 class="font-semibold text-gray-800 mb-2">Experiências Antriores</h4>
 
                     <p class="text-gray-600 text-sm mb-1">2021 - 2019 Coca-Cola</p>
                     <p class="text-gray-600 text-sm mb-1">2024 - 2022 Marata</p>
                     <p class="text-gray-600 text-sm mb-1">2024 - 2015 Insitituto Federal de Sergipe</p>
-                    
+                    <hr>
+                    <br>
+
                     <h4 class="font-semibold text-gray-800 mb-2">Cursos Extra-Curriculares</h4>
+
                     <p class="text-gray-600 text-sm mb-1">Python</p>
                     <p class="text-gray-600 text-sm mb-1">React Native</p>
                     <p class="text-gray-600 text-sm mb-1">PHP</p>
                     <p class="text-gray-600 text-sm mb-1">Autocad 3D</p>
                     <p class="text-gray-600 text-sm mb-1">Tinker Cad</p>
                     <p class="text-gray-600 text-sm mb-1">Corel Draw</p>
+                    <hr>
+                    <br>
+                    
                     <h4 class="font-semibold text-gray-800 mb-2">Idiomas</h4>
+
                     <p class="text-gray-600 text-sm mb-1">Inglês</p>
                     <p class="text-gray-600 text-sm mb-1">Espanhol</p>
-                    <p class="text-gray-600 text-sm mb-1">Francês</p>                
+                    <p class="text-gray-600 text-sm mb-1">Francês</p> 
+
                 </div>
             `;
             
