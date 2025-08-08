@@ -1,15 +1,15 @@
-# 🚀 TalentIFS - Banco de Talentos do IFS
+# 🚀 Start-IFS - Banco de Talentos do IFS
 
 ## 🔗 Acesse o Projeto
 👉 [https://joaovitor-23.github.io/TalentIFS/](https://joaovitor-23.github.io/TalentIFS/)
 
 ## 📝 Descrição do Projeto
 
-O TalentIFS é uma plataforma desenvolvida durante um hackathon para conectar estudantes talentosos do Instituto Federal de Sergipe (IFS) com empresas em busca de novos talentos. 💡 O projeto surgiu da necessidade de criar um canal estruturado que facilite a conexão entre alunos/egressos e oportunidades de estágio e emprego.
+O Start-IFS é uma plataforma desenvolvida durante um hackathon para conectar estudantes talentosos do Instituto Federal de Sergipe (IFS) com empresas em busca de novos talentos. 💡 O projeto surgiu da necessidade de criar um canal estruturado que facilite a conexão entre alunos/egressos e oportunidades de estágio e emprego.
 
 ## 🔍 Problema Resolvido
 
-Atualmente, o IFS e seus professores são frequentemente procurados por empresas interessadas em perfis de alunos e egressos, mas não existe um canal sistematizado para essas conexões. 😕 O TalentIFS resolve esse problema oferecendo:
+Atualmente, o IFS e seus professores são frequentemente procurados por empresas interessadas em perfis de alunos e egressos, mas não existe um canal sistematizado para essas conexões. 😕 O Start-IFS resolve esse problema oferecendo:
 
 - 🗃️ Um banco de talentos centralizado
 - 👤 Perfis completos de estudantes
