@@ -1,7 +1,7 @@
 # 🚀 Start-IFS - Banco de Talentos do IFS
 
 ## 🔗 Acesse o Projeto
-👉 [https://joaovitor-23.github.io/Start-IFS/](https://joaovitor-23.github.io/Start-IFS/)
+👉 [Acesse agora o Start-IFS](https://joaovitor-23.github.io/Start-IFS/)
 
 ## 📝 Descrição do Projeto
 
