@@ -123,6 +123,20 @@
         </div>
     </section>
 
+    <!-- MEU CURRICULO Section -->
+    <section id="curriculo" class="section-content hidden">
+        <div class="container mx-auto px-6 py-12">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold text-gray-800">Informações do Talento</h2>                
+            </div>
+            
+            <div id="show-curriculo" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Students will be populated here -->
+            </div>
+        </div>
+    </section>
+
+
     <!-- Register Section -->
     <section id="register" class="section-content hidden">
         <div class="container mx-auto px-6 py-12">
@@ -434,7 +448,10 @@
                         
                         <div class="flex gap-2">
                             <button onclick="openContactModal(${index})" class="gradient-bg text-white px-4 py-2 rounded-lg text-sm hover:opacity-90 transition-opacity flex-1">
-                                Entrar em Contato
+                                Contato
+                            </button>
+                            <button onclick="showCurriculoStudent(${index})" class="gradient-bg text-white px-4 py-2 rounded-lg text-sm hover:opacity-90 transition-opacity flex-1">
+                                Ver Currículo
                             </button>
                             ${student.linkedin ? `<a href="${student.linkedin}" target="_blank" class="border border-purple-600 text-purple-600 px-4 py-2 rounded-lg text-sm hover:bg-purple-50 transition-colors">LinkedIn</a>` : ''}
                         </div>
@@ -476,6 +493,45 @@
             `;
             
             modal.classList.remove('hidden');
+        }
+
+        // Contact modal functions
+        function showCurriculoStudent(studentIndex) {
+            showSection('curriculo');
+            const student = students[studentIndex];
+            const curriculoShow = document.getElementById('show-curriculo');
+            
+            curriculoShow.innerHTML = `
+                <div class="bg-gray-50 rounded-lg p-4 mb-4">                    
+                    <img src="https://cdn-icons-png.flaticon.com/512/6596/6596121.png" style="max-height:90px;">
+                    <h4 class="font-semibold text-gray-800 mb-2">${student.name}</h4>
+
+                    <p class="text-gray-600 text-sm mb-1">${student.course} - ${student.period} Período</p>
+                    <p class="text-gray-600 text-sm mb-1">📧 ${student.email}</p>
+                    <p class="text-gray-600 text-sm">📱 ${student.phone}</p>
+                    
+
+                    <h4 class="font-semibold text-gray-800 mb-2">Experiências Antriores</h4>
+
+                    <p class="text-gray-600 text-sm mb-1">2021 - 2019 Coca-Cola</p>
+                    <p class="text-gray-600 text-sm mb-1">2024 - 2022 Marata</p>
+                    <p class="text-gray-600 text-sm mb-1">2024 - 2015 Insitituto Federal de Sergipe</p>
+                    
+                    <h4 class="font-semibold text-gray-800 mb-2">Cursos Extra-Curriculares</h4>
+                    <p class="text-gray-600 text-sm mb-1">Python</p>
+                    <p class="text-gray-600 text-sm mb-1">React Native</p>
+                    <p class="text-gray-600 text-sm mb-1">PHP</p>
+                    <p class="text-gray-600 text-sm mb-1">Autocad 3D</p>
+                    <p class="text-gray-600 text-sm mb-1">Tinker Cad</p>
+                    <p class="text-gray-600 text-sm mb-1">Corel Draw</p>
+                    <h4 class="font-semibold text-gray-800 mb-2">Idiomas</h4>
+                    <p class="text-gray-600 text-sm mb-1">Inglês</p>
+                    <p class="text-gray-600 text-sm mb-1">Espanhol</p>
+                    <p class="text-gray-600 text-sm mb-1">Francês</p>                
+                </div>
+            `;
+            
+            
         }
 
         function closeContactModal() {
