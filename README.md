@@ -1,7 +1,7 @@
 # 🚀 Start-IFS - Banco de Talentos do IFS
 
 ## 🔗 Acesse o Projeto
-👉 [https://joaovitor-23.github.io/TalentIFS/](https://joaovitor-23.github.io/TalentIFS/)
+👉 [https://joaovitor-23.github.io/TalentIFS/](https://joaovitor-23.github.io/Start-IFS/)
 
 ## 📝 Descrição do Projeto
 
@@ -54,4 +54,4 @@ Este projeto foi desenvolvido por [MixSteel] durante o [HackTec - Hackathon IFS/
 ---
 
 Feito com ❤️ para a comunidade do IFS! �🎓✨  
-🔗 [Acesse agora o TalentIFS](https://joaovitor-23.github.io/TalentIFS/)
+🔗 [Acesse agora o TalentIFS](https://joaovitor-23.github.io/Start-IFS/)
